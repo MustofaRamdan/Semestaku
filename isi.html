@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertanyaan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="isi.css">
+</head>
+<body class="bg-gradient-to-b from-rose-200 to-pink-500 min-h-screen flex items-center justify-center overflow-hidden relative">
+
+    <!-- Container utama -->
+    <div id="container-utama" class="container max-w-lg mx-auto text-center text-white space-y-8 p-8 rounded-lg bg-opacity-80 bg-pink-600 shadow-lg transition duration-500 ease-in-out transform">
+        <h1 class="text-4xl font-bold animate-text-appear">Untuk Cinta Sejatiku 💖</h1>
+        <p class="text-xl font-light animate-text-appear delay-2">Aku punya beberapa pertanyaan untukmu!</p>
+        <button onclick="tampilkanPertanyaan()" class="bg-rose-500 hover:bg-rose-400 text-white py-3 px-8 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 focus:outline-none animate-fadeIn delay-3">
+            Mulai Pertanyaan
+        </button>
+    </div>
+
+    <!-- Container untuk Pertanyaan -->
+    <div id="pertanyaan-container" class="hidden text-center">
+        <div id="question-container" class="bg-white rounded-xl shadow-xl p-8 max-w-md mx-auto relative">
+            <h2 id="question-text" class="text-xl font-bold mb-4 animate__animated animate__fadeIn animate__delay-1s"></h2>
+            <div class="space-x-4">
+                <button onclick="jawabPertanyaan(true)" class="bg-pink-500 text-white py-2 px-6 rounded-lg hover:bg-pink-400 transition duration-300">Iya</button>
+                <button onclick="jawabPertanyaan(false)" class="bg-pink-500 text-white py-2 px-6 rounded-lg hover:bg-pink-400 transition duration-300">Tidak</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container untuk Pesan Pop-up -->
+    <div id="popup-container" class="fixed inset-0 hidden flex items-center justify-center z-10 bg-opacity-70 bg-black">
+        <div class="popup-inner space-y-4 text-center"></div>
+    </div>
+
+    <!-- Halaman Akhir Romantis -->
+    <div id="halaman-akhir" class="hidden fixed inset-0 flex flex-col items-center justify-center text-center text-white p-8 bg-gradient-to-b from-pink-500 to-red-600">
+        <h1 class="text-5xl font-extrabold mb-4">Haiii Cantikku, Manisku, Sayangku</h1>
+        <p class="text-2xl max-w-md mb-6">Aku tidak tau kamu menjawab apa. Aku cuman ingin bilang kalo aku benar-benar mencintaimu. Ku berharap kita bisa selalu bersama untuk selamanya. Jangan pergi dariku, jangan tinggalkan aku.
+        </p>
+        <div class="hearts-bg fixed inset-0 pointer-events-none"></div>
+    </div>
+
+    <script src="isi.js"></script>
+</body>
+</html>
